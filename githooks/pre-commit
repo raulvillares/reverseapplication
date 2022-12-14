@@ -1,0 +1,5 @@
+if [ "$(uname)" == "Darwin" ]; then
+  ./githooks/pre-commit-unix
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+  ./githooks/pre-commit.ps1
+fi

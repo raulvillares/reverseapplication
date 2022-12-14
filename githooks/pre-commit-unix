@@ -1,0 +1,10 @@
+#!/bin/sh
+
+output=$(dotnet test --filter FullyQualifiedName\~UnitTests)
+
+if [ $? -ne 0 ]; then
+  echo "$output"
+  exit 1
+fi
+
+exit 0

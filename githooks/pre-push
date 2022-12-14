@@ -1,0 +1,5 @@
+if [ "$(uname)" == "Darwin" ]; then
+  ./githooks/pre-push-unix
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+  ./githooks/pre-push.ps1
+fi
