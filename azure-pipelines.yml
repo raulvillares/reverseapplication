@@ -19,5 +19,15 @@ steps:
    inputs:
     command: test
     projects: '**/*Tests/*.csproj'
+ - task: DotNetCoreCLI@2
+   inputs:
+     command: 'publish'
+     publishWebProjects: true
+ - task: AzureWebApp@1
+   inputs:
+     azureSubscription: 'Azure'
+     appType: 'webAppLinux'
+     appName: 'ReverseApplication'
+     package: '$(System.DefaultWorkingDirectory)/**/*.zip'    
  - script: echo Hello, world! 
    displayName: 'Run a one-line script'
