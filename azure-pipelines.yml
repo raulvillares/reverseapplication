@@ -25,7 +25,7 @@ steps:
      publishWebProjects: true
  - task: AzureWebApp@1
    inputs:
-     azureSubscription: 'Azure'
+     azureSubscription: 'Azure2'
      appType: 'webAppLinux'
      appName: 'ReverseApplication'
      package: '$(System.DefaultWorkingDirectory)/**/*.zip'    
