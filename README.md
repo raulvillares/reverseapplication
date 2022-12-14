@@ -16,7 +16,7 @@ dotnet test
 Run App
 ===
 
-dotnet run
+cd ReverseAPI && dotnet run && cd ..
 
 Check out the app
 ===
