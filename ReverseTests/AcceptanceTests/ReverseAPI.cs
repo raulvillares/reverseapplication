@@ -17,5 +17,6 @@ public class ReverseAPI
         var response = await client.GetAsync("/reverse?text=hello world");
         
         response.StatusCode.Should().Be(HttpStatusCode.OK);
+        response.Content.ReadAsStringAsync().Result.Should().Be("dlrow olleh");
     }
 }
