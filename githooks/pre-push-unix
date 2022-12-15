@@ -1,10 +1,14 @@
 #!/bin/sh
 
+echo "Running acceptance tests..."
+
 output=$(dotnet test --filter FullyQualifiedName\~AcceptanceTests)
 
 if [ $? -ne 0 ]; then
   echo "$output"
   exit 1
 fi
+
+echo "OK."
 
 exit 0

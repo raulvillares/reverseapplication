@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Lanzando tests unitarios..."
+echo "Running unit tests..."
 
 output=$(dotnet test --filter FullyQualifiedName\~UnitTests)
 
@@ -9,6 +9,6 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "Todo OK."
+echo "OK."
 
 exit 0
